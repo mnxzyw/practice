@@ -5,6 +5,7 @@
 
 def test():
     print("hello world")
+    print("this is commits")
 
 
 if __name__=='__main__':
