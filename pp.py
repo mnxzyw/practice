@@ -1,11 +1,7 @@
 #!/bin/env python
 #coding:utf-8
 
-#"this is a big project"
+'''
+冒泡排序
+'''
 
-#"this is feature-A"
-#"this is fix-B"
-#"this is true feature-C"
-#"this is feature-D"
-
-# 12121iiiiiii2
