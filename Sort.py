@@ -16,6 +16,16 @@ def Bubble_sort(la):
             if(la[i]>la[i+1]):
                 la[i],la[i+1]=la[i+1],la[i]
 
+#选择排序
+
+def Select_sort(la):
+    print("select sort")
+    if(None==la):
+        return
+
+
+
+
 
 def Print(arr):
     for temp in arr:
@@ -23,9 +33,11 @@ def Print(arr):
 
 def test(arr):
     Bubble_sort(arr);
+    Select_sort(arr);
     Print(arr);
 
 if __name__=='__main__':
 
     array=[23,12,32,56,21,1,5,9];
     test(array);
+
