@@ -10,5 +10,5 @@ def get_img_base64_from_url(url):
     print ls_f
 
 if __name__=='__main__':
-    str1 = "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1534839870320&di=e666a5d0a0cf102c0170fd4a6ad7acfb&imgtype=jpg&src=http%3A%2F%2Fimg2.imgtn.bdimg.com%2Fit%2Fu%3D1745902082%2C3116919931%26fm%3D214%26gp%3D0.jpg"
+    str1 = "http://fm.shiyunjj.com/2018/1411/5izf.jpg"
     get_img_base64_from_url(str1)

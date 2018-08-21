@@ -16,12 +16,23 @@ def Bubble_sort(la):
             if(la[i]>la[i+1]):
                 la[i],la[i+1]=la[i+1],la[i]
 
-#选择排序
+#selecet sort
 
 def Select_sort(la):
-    print("select sort")
+    print("Select sort")
     if(None==la):
         return
+
+    for i in range(len(la)):
+        min=i;
+        for temp in range(i+1,len(la)):
+            if(la[min]>la[temp]):
+                min=temp
+            if(min!=i):
+                la[min],la[i]=la[i],la[min]
+
+
+
 
 
 
