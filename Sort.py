@@ -35,6 +35,7 @@ def Select_sort(la):
 
 #insert sort
 def Insert_sort(la):
+    print("Insert_sort")
     for i in range(1,len(la)):
         j=i-1
         temp=la[i]
@@ -68,10 +69,47 @@ def f_sort(arr,nlow,nhigh):
     return nlow
 
 def Quick_sort(la,nlow,nhigh):
+    print("Qutick_sort")
     if(nlow<nhigh):
         nstandard=f_sort(la,nlow,nhigh)
         Quick_sort(la,nlow,nstandard-1)
         Quick_sort(la,nstandard+1,nhigh)
+
+
+#Merge
+def Merge(la,start,end):
+    tmp_list=[]
+    i=start
+    mid=(start+end)/2
+    j=end
+
+    while(i<=mid and j<=end):
+        if(la[i]<la[j]):
+            tmp_list.append(la[i])
+            i+=1
+        else:
+            tmp_list.append(la[j])
+            j+=1
+
+    while(i<=mid):
+        tmp_list.append(la[i])
+        i+=1
+    while(j<=end):
+        tmp_list.append(la[j])
+        j+=1
+
+    for tmp in range(len(tmp_list)):
+        la[start+tmp]=tmp_list[tmp]
+
+
+#Merge_sort
+def Merge_sort(la,start,end):
+    print("Merge_sort")
+    mid=(start+end)/2
+    if(start<end):
+        Merge_sort(la,start,mid)
+        Merge_sort(la,mid+1,end)
+        Merge(la,start,end)
 
 
 
@@ -84,6 +122,7 @@ def test(arr):
     Select_sort(arr)
     Insert_sort(arr)
     Quick_sort(arr,0,len(arr)-1)
+    Merge_sort(arr,0,len(arr)-1)
     Print(arr)
 
 if __name__=='__main__':
